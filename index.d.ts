@@ -5,10 +5,11 @@ import { Middleware } from 'koa'
 export declare const authz: Middleware<Context, {}>
 
 export declare class DefaultAuthorizer {
-  protected ctx: Context;
-  constructor(ctx: Context, enforcer: Enforcer);
-  getUserName(): string;
-  checkPermission(): Promise<boolean>;
+  protected enforcer: Enforcer;
+  
+  constructor(enforcer: Enforcer);
+  getUserName(ctx: Context): string;
+  checkPermission(ctx: Context): Promise<boolean>;
 }
 
 export interface CasbinOptions {
