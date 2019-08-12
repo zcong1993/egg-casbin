@@ -51,12 +51,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eggjs/egg-casbin.git"
+    "url": "git+https://github.com/zcong1993/egg-casbin.git"
   },
   "bugs": {
-    "url": "https://github.com/eggjs/egg/issues"
+    "url": "https://github.com/zcong1993/egg-casbin/issues"
   },
-  "homepage": "https://github.com/eggjs/egg-casbin#readme",
+  "homepage": "https://github.com/zcong1993/egg-casbin#readme",
   "author": "",
   "license": "MIT"
 }
