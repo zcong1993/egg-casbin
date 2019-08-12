@@ -1,6 +1,6 @@
 {
   "name": "@zcong/egg-casbin",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "",
   "eggPlugin": {
     "name": "casbin"
@@ -13,7 +13,8 @@
   "main": "./lib/index.js",
   "types": "./index.d.ts",
   "dependencies": {
-    "casbin": "^3.0.3"
+    "casbin": "^3.0.3",
+    "debug": "^4.1.1"
   },
   "devDependencies": {
     "autod": "^3.0.1",
