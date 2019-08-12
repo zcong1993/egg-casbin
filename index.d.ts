@@ -12,8 +12,8 @@ export declare class DefaultAuthorizer {
 
 export interface CasbinOptions {
   enable: boolean;
-  newEnforcer: Enforcer;
-  authorizer: DefaultAuthorizer;
+  newEnforcer: () => Promise<Enforcer>;
+  authorizer?: DefaultAuthorizer;
 }
 
 declare module 'egg' {
