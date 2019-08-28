@@ -32,7 +32,7 @@ $ npm i @zcong/egg-casbin --save
 
 ## Usage
 
-### Simple Usage
+### Use a customized authorizer
 
 ```ts
 // app/middleware/casbin.ts
@@ -40,20 +40,6 @@ import { authz } from '@zcong/egg-casbin'
 
 export default authz
 ```
-
-```ts
-// {app_root}/config/config.default.ts
-// ...
-config.casbin = {
-  enable: true,
-  newEnforcer: async() => {
-    const enforcer = await newEnforcer(`${__dirname}/authz_model.conf`, `${__dirname}/authz_policy.csv`)
-    return enforcer
-  },
-}
-```
-
-### Use a customized authorizer
 
 ```ts
 // {app_root}/config/config.default.ts
