@@ -13,7 +13,7 @@
   "main": "./lib/index.js",
   "types": "./index.d.ts",
   "dependencies": {
-    "casbin": "^3.0.3",
+    "casbin": "^5.12.0",
     "debug": "^4.1.1"
   },
   "devDependencies": {
