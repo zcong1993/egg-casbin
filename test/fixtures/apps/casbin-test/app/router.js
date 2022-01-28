@@ -1,7 +1,12 @@
 'use strict';
 
-module.exports = app => {
-  const { router, controller } = app;
+const config = require('../config/config.default');
 
-  router.get('/', controller.home.index);
+module.exports = app => {
+  const {
+    router,
+    controller,
+  } = app;
+  const casbin = app.middleware.casbin(config.casbin);
+  router.get('/', casbin, controller.home.index);
 };

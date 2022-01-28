@@ -14,10 +14,9 @@ describe('test/casbin.test.js', () => {
   after(() => app.close());
   afterEach(mock.restore);
 
-  it('should GET /', () => {
+  it('should GET 403', () => {
     return app.httpRequest()
       .get('/')
-      .expect('hi, casbin')
-      .expect(200);
+      .expect(403);
   });
 });
