@@ -1,0 +1,28 @@
+name: JS Test
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    types:
+      - opened
+      - synchronize
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v3
+        with:
+          # registry-url: "https://registry.npmjs.org"
+          node-version: 17
+          cache: npm
+      - name: install dependencies
+        run: npm ci
+      - name: run test
+        run: npm run test-local
+      # - uses: codecov/codecov-action@v2
